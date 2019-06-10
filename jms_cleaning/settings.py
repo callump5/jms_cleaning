@@ -26,7 +26,7 @@ SECRET_KEY = '=7rip%bbsbgf@t-jox5hg+fst!&2w95^9(w@l1%3+hk1-3mpbo'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://jms-cleaning.herokuapp.com',
+    'jms-cleaning.herokuapp.com',
     '127.0.0.1'
 
 ]
