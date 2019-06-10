@@ -1,1 +1,1 @@
-web: gunicorn jms_site.wsgi :app
+web: gunicorn jms_cleaning.wsgi :app
