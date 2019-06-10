@@ -1,0 +1,1 @@
+web: gunicorn jms_site.wsgi :app
