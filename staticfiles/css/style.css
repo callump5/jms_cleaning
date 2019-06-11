@@ -16,7 +16,7 @@
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 400;
         color: #3a3a3a;
         list-style: none;
         text-decoration: none;
@@ -100,19 +100,20 @@ font-family: 'Roboto', sans-serif;
     }
 
     #logo {
-        max-height: 100px;
+        max-height:100px;
         width: auto;
         margin: 10px 0;
     }
 
     #social-links {
+        margin: 40px 0  25px 0;
         width: 60%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
 
-    .s-link {
+    .s-link, .link {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -124,6 +125,7 @@ font-family: 'Roboto', sans-serif;
         margin-right: 0;
     }
     .s-link img {
+        color: white;
         margin-right: 5px;
     }
     .s-link img, #toggle {
@@ -131,7 +133,10 @@ font-family: 'Roboto', sans-serif;
         width: auto;
     }
 
-    .social-text {display: none}
+    .social-text {
+        display: none;
+        color: white
+    }
 
     #nav-body {
         border-top: 1px solid #e6e6e6;
@@ -363,6 +368,10 @@ footer span {
 
     @media screen and (min-width: 600px){
 
+        #navbar-header {
+            justify-content: center;
+        }
+
 
         .container, .nav-container {
             width: 80%;
@@ -374,8 +383,7 @@ footer span {
         }
 
         #social-links {
-            width: 75%;
+            width: 35%;
             justify-content: space-between;
         }
-        .social-text {display: block}
     }
