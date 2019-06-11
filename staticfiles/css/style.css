@@ -7,6 +7,8 @@
         --background-image-2: linear-gradient(to left, rgba(8, 154, 221, 0.7), rgba(46, 149, 196, 0.7)) , url("/static/images/landing/adult-cleaning-flora-713297.jpg");
         --background:linear-gradient(to left, rgb(8, 154, 221), rgb(46, 149, 196))
     }
+
+
 /* Reset */
     * {
         margin: 0;
@@ -53,7 +55,7 @@ font-family: 'Roboto', sans-serif;
     }
 
     .container, .nav-container {
-        width: 70%;
+        width: 95%;
         margin: 0 auto;
     }
 
@@ -83,7 +85,7 @@ font-family: 'Roboto', sans-serif;
 
     .grayed {
         background-color: rgba(218, 218, 218, 0.31);
-        padding: 0  0 35px 0;
+        padding: 0  0 25px 0;
     }
 
 
@@ -107,7 +109,7 @@ font-family: 'Roboto', sans-serif;
         width: 60%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .s-link {
@@ -115,6 +117,11 @@ font-family: 'Roboto', sans-serif;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin: 0 5px;
+    }
+
+    .s-link:last-child {
+        margin-right: 0;
     }
     .s-link img {
         margin-right: 5px;
@@ -123,6 +130,8 @@ font-family: 'Roboto', sans-serif;
         height: 30px;
         width: auto;
     }
+
+    .social-text {display: none}
 
     #nav-body {
         border-top: 1px solid #e6e6e6;
@@ -222,6 +231,7 @@ font-family: 'Roboto', sans-serif;
 footer {
     background-color: rgba(222, 222, 222, 0.6);
     text-align: center;
+    padding: 20px;
 }
 
 .footer-links {
@@ -246,6 +256,10 @@ footer span {
 
 #service-cards {
     padding: 25px 0;
+}
+
+#links {
+    justify-content: space-around;
 }
 
 .service {
@@ -344,4 +358,24 @@ footer span {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+    }
+
+
+    @media screen and (min-width: 600px){
+
+
+        .container, .nav-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #toggle {
+            display: none;
+        }
+
+        #social-links {
+            width: 75%;
+            justify-content: space-between;
+        }
+        .social-text {display: block}
     }
