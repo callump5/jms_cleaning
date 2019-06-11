@@ -6,6 +6,9 @@
     <title>JMS Cleaning</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
+
+
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
 </head>
 
 
@@ -49,14 +52,14 @@
     </header>
 
 
-    <div id="landing" title="landing image">
+    <div id="landing" class="img-break" title="landing image">
         <h1>JMS Commerical Cleaning</h1>
         <h2>Professional Office Cleaners</h2>
     </div>
 
     <main>
         <h1 class="title">About JMS Cleaning </h1>
-        <article id="about" class="container ">
+        <article id="about" class="container padding-bottom">
             <p class="text">
                 Based in Southend, Essex, JMS Commercial Cleaning is a small, but reliable company that has built up a solid reputation, purely built on trust in Essex and the surrounding areas.
                 We pride ourselves on our reliable, consistent and friendly service for our customers. Some of which we have built great relationships with and even service multiple properties for.
@@ -68,35 +71,64 @@
             </p>
         </article>
 
-        <div id="link-box" class="container row">
+        <div id="link-box" class="grayed">
 
-            <div class="link-box">
-                <h1>Check our Services</h1>
-                <p>We offer high qulaity, reliable cleaning services. So click on the button and check out all we have to offer! </p>
-                <a class="link-btn">Services</a>
+                <h1 class="title">Want To Find Out More?</h1>
+            <div class="container row">
+                <div class="link-box">
+                    <h1>Check our Services</h1>
+                    <p>We offer high qulaity, reliable cleaning services. So click on the button and check out all we have to offer! </p>
+                    <a class="link-btn">Services</a>
+                </div>
+
+                <div class="link-box">
+                    <h1>What They Said</h1>
+                    <p>With plenty of happy clients, see what they had to say about our service!</p>
+                    <a class="link-btn">Testimonails</a>
+                </div>
+
+                <div class="link-box">
+                    <h1>See For Yourself</h1>
+                    <p>Want to see for yourself? Head over to our gallery page and check our the difference after JMS have been in! </p>
+                    <a class="link-btn">Gallery</a>
+                </div>
+
+
+                <div class="link-box">
+                    <h1>Impressed?</h1>
+                    <p>Click on the button below to be taken to our contact page where you can get our information or book a call!  </p>
+                    <a class="link-btn">Get In Touch</a>
+                </div>
             </div>
+        </div>
 
-            <div class="link-box">
-                <h1>What They Said</h1>
-                <p>With plenty of happy clients, see what they had to say about our service!</p>
-                <a class="link-btn">Testimonails</a>
+
+        <div id="services" class="">
+            <article class="container">
+                <h1 class="title">Services</h1>
+                <p class="text">
+                Our fully trained staff work to a detailed cleaning schedule and regular inspections by the cleaning manager ensures that we maintain our high standards. We have reliable systems in
+                place so that supplies are always updated and do not run out. We have numerous well trained cleaning staff employed by our business meaning that we can provide additional operatives if required.</p>
+            </article>
+
+
+            <div id="service-cards" class="container row">
+                {% for service in services %}
+                    <div class="service" style="background-image: url( {{ service.image.url }} )">
+                        <h1><a href="{{ service.slug }}">{{ service }}</a></h1>
+                    </div>
+                {% endfor %}
             </div>
-
-            <div class="link-box">
-                <h1>See For Yourself</h1>
-                <p>Want to see for yourself? Head over to our gallery page and check our the difference after JMS have been in! </p>
-                <a class="link-btn">Gallery</a>
-            </div>
+        </div>
 
 
-            <div class="link-box">
-                <h1>Impressed?</h1>
-                <p>Click on the button below to be taken to our contact page where you can get our information or book a call!  </p>
-                <a class="link-btn">Get In Touch</a>
+        <div id="contact" class="img-break">
+            <div class="container">
+
+                {% include 'contact/contact_form.html' %}
             </div>
         </div>
     </main>
-
 <footer>
     <div class="container">
         <ul class="footer-links">
@@ -108,12 +140,17 @@
             <li><a class="nav-btn link" href="/policies/">Policies</a></li>
             <li><a class="nav-btn link" href="/contact-us/">Contact</a></li>
         </ul>
-<div class="footer-links">
-    <p >Designed & Developed by <span>Callum Pullinger</span></p>
 
-</div>
+        <div class="footer-links">
+            <p >Designed & Developed by <span>Callum Pullinger</span></p>
+        </div>
     </div>
 </footer>
+
+
+{% block bottom_js %}
+
+{% endblock %}
 
 </body>
 </html>
