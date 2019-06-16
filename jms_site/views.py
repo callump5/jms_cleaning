@@ -25,10 +25,24 @@ def get_index(request):
     else:
         contact_form = ContactForm()
 
-
     args = {
         'services': services,
         'contact_form': contact_form,
     }
 
-    return render(request, 'base/index.html', args)
+    return render(request, 'home/home.html', args)
+
+def get_about(request):
+    return render(request, 'about/about_page.html')
+
+def get_services(request):
+    return render(request, 'services/services_page.html')
+
+def get_testimonials(request):
+    return render(request, 'testimonials/testimonials_page.html')
+
+def get_gallery(request):
+    return render(request, 'gallery/gallery_page.html')
+
+def get_policies(request):
+    return render(request, 'policies/policies.html')

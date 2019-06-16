@@ -5,7 +5,7 @@
         --background-image: linear-gradient(to left, rgba(8, 154, 221, 0.7), rgba(46, 149, 196, 0.7)) , url("/static/images/landing/architectural-design-architecture-buildings-830891.jpg");
         --background-image-1: linear-gradient(to left, rgba(8, 154, 221, 0.7), rgba(46, 149, 196, 0.7)) , url("/static/images/landing/architectural-design-architecture-ceiling-380768.jpg");
         --background-image-2: linear-gradient(to left, rgba(8, 154, 221, 0.7), rgba(46, 149, 196, 0.7)) , url("/static/images/landing/adult-cleaning-flora-713297.jpg");
-        --background:linear-gradient(to left, rgb(8, 154, 221), rgb(46, 149, 196))
+        --background:linear-gradient(to left, rgb(8, 162, 233), rgb(56, 183, 240))
     }
 
 
@@ -126,7 +126,7 @@ font-family: 'Roboto', sans-serif;
     }
     .s-link img {
         color: white;
-        margin-right: 5px;
+        margin-right: 5px
     }
     .s-link img, #toggle {
         height: 30px;
@@ -264,6 +264,8 @@ footer span {
 }
 
 #links {
+    width: 65%;
+    margin: 0 auto;
     justify-content: space-around;
 }
 
@@ -335,6 +337,7 @@ footer span {
     }
 
     .col-md-3 {
+        width: 20%;
         display: flex;
         flex-direction: column;
     }
@@ -383,7 +386,7 @@ footer span {
         }
 
         #social-links {
-            width: 35%;
+            width: 20%;
             justify-content: space-between;
         }
     }

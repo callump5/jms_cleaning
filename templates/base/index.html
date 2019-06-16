@@ -14,50 +14,9 @@
 
 <body>
 
-    <header>
+   {% include 'base/navbar.html' %}
 
-        <nav id="nav">
-
-            <div id="navbar-header" class="container">
-            <!-- Nav Logo -->
-                <img alt="jms-logo" id="logo" src="/static/images/logo/jms-original-logo.png">
-
-            <!-- Nav Toggler -->
-                <img id="toggle" src="/static/icons/menu.png">
-            </div>
-
-
-            <div id="nav-body">
-            <!-- Nav Links -->
-                <ul id="nav-links" class="nav-container">
-                    <li><a class="nav-btn link" href ="/">Home</a></li>
-                    <li><a class="nav-btn link" href ="/testimonials/">Testimonials</a></li>
-                    <li><a class="nav-btn link" href="/staff-profiles/">Staff</a></li>
-                    <li><a class="nav-btn link" href="/info/">Info</a></li>
-                    <li><a class="nav-btn link" href="/fundraising/">Services</a></li>
-                    <li><a class="nav-btn link" href="/policies/">Policies</a></li>
-                    <li><a class="nav-btn link" href="/contact-us/">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-
-    <div id="landing" class="img-break" title="landing image">
-        <h1>JMS Commerical Cleaning</h1>
-        <h2>Professional Office Cleaners</h2>
-
-
-            <!-- Social Links -->
-
-            <div id="social-links">
-                    <a href="/" class="s-link link"><img src="/static/icons/fb-white.png"><span class="social-text">jms-commercial-cleaning</span></a>
-                    <a href="/" class="s-link link"><img src="/static/icons/phone-white.png"><span class="social-text">07412090817</span> </a>
-                    <a href="mailto:me@hotmail.com" class="s-link link"><img src="/static/icons/email-white.png"><span class="social-text">me@hotmail.co.uk</span> </a>
-            </div>
-
-
-    </div>
+    {% include 'base/landing.html' %}
 
     <main>
         <h1 class="title">About JMS Cleaning </h1>
