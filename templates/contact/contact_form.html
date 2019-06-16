@@ -1,0 +1,44 @@
+
+<h1 class="title">Get in Touch</h1>
+<div id='contact-form' class="padding-bottom">
+    <form class='form' method="POST">
+        {% csrf_token %}
+        {{ contact_form }}
+
+        <div class="gdpr">
+            <input type="checkbox"  id="tick" onchange="document.getElementById('contact-btn').disabled = !this.checked;" />
+            <p>By using this form you agree with the storage and handling of your data by this website.</p>
+        </div>
+        <div id='contact-submit'>
+            <button type="submit" class="btn" name="contact-btn" id="contact-btn" disabled>Contact Me!</button>
+        </div>
+    </form>
+</div>
+
+{% block bottom_js %}
+    <script type="text/javascript">
+        $('#id_name').addClass('group-1');
+        $('label[for=id_name]').addClass('group-1');
+
+        $('.group-1').wrapAll('<div class=col-md-3>');
+
+        $('#id_number').addClass('group-2');
+        $('label[for=id_number]').addClass('group-2');
+
+        $('.group-2').wrapAll('<div class=col-md-3>');
+
+        $('#id_email').addClass('group-3');
+        $('label[for=id_email]').addClass('group-3');
+
+        $('.group-3').wrapAll('<div class=col-md-3>');
+
+        $('#id_service').addClass('group-4');
+        $('label[for=id_service]').addClass('group-4');
+
+        $('.group-4').wrapAll('<div class=col-md-3>');
+
+        $('.col-md-3').wrapAll('<div class=row>')
+
+    </script>
+
+{% endblock %}
