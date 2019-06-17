@@ -8,5 +8,4 @@ django-crispy-forms
 dj_database_url
 django-storages
 django-tinymce
-tinymce
 boto
