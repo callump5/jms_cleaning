@@ -1,0 +1,47 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+
+    <div id="services" class="">
+        <article class="container text text-left">
+            <h1 class="title">{{ service }}</h1>
+
+            {% autoescape off %}
+                <p>{{ service.description}}</p>
+            {% endautoescape %}
+
+        <div id="service-imgs" class="row-flex">
+                {% for job in jobs %}
+                    {% if job.after_img_1 %}
+                        <div title="{{ job }}-1" class="service_img" style="background-image: url({{ job.after_img_1.url }})"></div>
+                    {% endif %}
+                    {% if job.after_img_2 %}
+                        <div title="{{ job }}-2" class="service_img" style="background-image: url({{ job.after_img_2.url }})"></div>
+                    {% endif %}
+                    {% if job.after_img_3 %}
+                        <div title="{{ job }}-3" class="service_img" style="background-image: url({{ job.after_img_3.url }})"></div>
+                    {% endif %}
+                {% endfor %}
+        </div>
+
+
+        </article>
+
+
+        <div id="service-cards" class="container row">
+            {% for service in services %}
+                <div class="service" style="background-image: url( {{ service.image.url }} )">
+                    <h1><a href="{% url 'service' service.slug %}">{{ service }}</a></h1>
+                </div>
+            {% endfor %}
+        </div>
+
+
+        <div id="contact" class="img-break">
+            <div class="container">
+
+                {% include 'contact/contact_form.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -7,7 +7,7 @@
                 <img alt="jms-logo" id="logo" src="/static/images/logo/jms-original-logo.png">
 
             <!-- Nav Toggler -->
-                <img id="toggle" src="/static/icons/menu.png">
+                <img id="toggle" src="/static/icons/menu.png" onclick="toggleNav()">
             </div>
 
 
@@ -19,9 +19,37 @@
                     <li><a class="nav-btn link" href="/services/">Services</a></li>
                     <li><a class="nav-btn link" href="/gallery/">Gallery</a></li>
                     <li><a class="nav-btn link" href ="/testimonials/">Testimonials</a></li>
-                    <li><a class="nav-btn link" href="/policies/">Policies</a></li>
-                    <li><a class="nav-btn link" href="/contact-us/">Contact</a></li>
+                    <li><a class="nav-btn link" href="/contact/">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
+
+
+    <script type="text/javascript">
+
+        function openNav() {
+            $(this).css('display', 'flex');
+            nav = true;
+        }
+
+        function closeNav() {
+            $(this).css('display', 'none');
+            nav = false;
+        }
+
+        function toggleNav() {
+            nav ? closeNav() : openNav();
+        }
+
+        $( "#toggle" ).click(function() {
+            $( "#nav-links" ).toggle( "fast", function() {
+
+                // Animation complete.
+            });
+        });
+
+
+
+    </script>

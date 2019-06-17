@@ -6,14 +6,30 @@ from django.utils.text import slugify
 
 from django.db import models
 
+from tinymce.models import HTMLField
+
 # Create your models here.
+
+# About
+
+class About(models.Model):
+    about = HTMLField()
+
+    def __unicode__(self):
+        return 'About - ' + str(self.id)
+
+    class Meta:
+        verbose_name = 'About'
+        verbose_name_plural = 'About Information'
+
+
 
 
 # Services
 class Service(models.Model):
     service = models.CharField(max_length=300)
     slug = models.SlugField(max_length=300, default='', editable=False)
-    description = models.TextField()
+    description = HTMLField()
     image = models.ImageField(upload_to='services')
 
     def get_absolute_url(self):
@@ -35,7 +51,7 @@ class Service(models.Model):
 
 
 
-# Testimonials
+# Testimonialsa
 class Testimonials(models.Model):
     name = models.CharField(max_length=200, default='Anonymous')
     company = models.CharField(max_length=400, blank=True, null=True)
@@ -53,6 +69,7 @@ class Testimonials(models.Model):
 # Job Upload
 class JobPost(models.Model):
     title = models.CharField(max_length=200)
+    service = models.ForeignKey(Service)
     testimonial = models.ForeignKey(Testimonials)
     description = models.TextField(blank=True, null=True)
     before_img_1 = models.ImageField(upload_to='job_post/before', blank=True, null=True)

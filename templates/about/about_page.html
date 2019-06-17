@@ -1,10 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base/index.html' %}
 
-</body>
-</html>
+{% block head_js %}
+    <title> About JMS Cleaning</title>
+
+    <!-- Meta Tags -->
+    <meta name="title" content="About JMS Commercial Cleaning">
+    <meta name="description" content="Action Guitars has 15 years experiance in building and repairing custom guitar
+     setups for local pickers all over Essex | We build vintage style, custom electric guitars and we also offer a
+     guitar and amp repair service | Guitar Repairs Essex | Guitar Repair | Leigh-on-Sea | Southend-on-Sea |
+     Action Guitars"/>
+
+    <meta property="og:description" content="Action Guitars has 15 years experiance in building and repairing custom guitar
+     setups for local pickers all over Essex | We build vintage style, custom electric guitars and we also offer a
+     guitar and amp repair service | Guitar Repairs Essex | Guitar Repair | Leigh-on-Sea | Southend-on-Sea |
+     Action Guitars"/>
+
+
+    <!-- FB Tags -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Action Guitars" />
+    <meta property="og:url" content="actionguitars.co.uk" />
+    <meta property="og:image" content="\static\guitar-logo2.png">
+    <meta property="og:site_name" content="Action Guitars" />
+{% endblock %}
+
+{% block content %}
+    <h1 class="title">About JMS Cleaning </h1>
+    <article id="about" class="container padding-bottom text">
+            {% autoescape off %}
+                {% for about in abouts  %}
+                    {% autoescape off %}
+                        {{ about.about }}
+                    {% endautoescape %}
+                {% endfor %}
+            {% endautoescape %}
+    </article>
+
+
+
+    <div id="contact" class="img-break">
+        <div class="container">
+
+            {% include 'contact/contact_form.html' %}
+        </div>
+    </div>
+{% endblock %}
