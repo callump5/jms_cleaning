@@ -156,7 +156,10 @@
         width: 100%;
         padding: 10px 0;
         text-align: center;
-        font-size: 1.2em;
+    }
+    #nav-links li a {
+        font-size: 1.1em;
+        font-weight: 400;
     }
 
     #nav-links li:last-child{
@@ -206,6 +209,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
 
     }
 
@@ -498,14 +502,39 @@ footer span {
         justify-content: flex-end;
     }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
+
+
+    /****************/
+    /**** Navbar ****/
+    /****************/
+
+    #toggle {
+        display: none;
+    }
+
+    #navbar-header {
+        justify-content: center;
+    }
+
+    #nav-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+
+    /**************/
+    /**** Home ****/
+    /**************/
 
     .link-box {
         height: 320px;
     }
 
-    .img-break {
-        background-size: unset;
+    #landing, .img-break {
+        min-height: 60vh;
+        background-size: 100% 100%;
     }
 
 }
