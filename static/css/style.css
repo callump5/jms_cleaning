@@ -498,10 +498,14 @@ footer span {
         justify-content: flex-end;
     }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 800px) {
 
     .link-box {
         height: 320px;
+    }
+
+    #landing, .img-break {
+        background-size: unset;
     }
 
 }
