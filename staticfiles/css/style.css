@@ -278,7 +278,7 @@
 }
 
 #link-box {
-    background-image:var(--background-image-1);
+    background-image:var(--background-image-2);
 
     background-position: 50%;
     background-size: cover;
@@ -458,7 +458,7 @@ footer span {
 /*****************/
 
     #contact {
-        background-image:  var(--background-image-2);
+        background-image:  var(--background-image-1);
     }
 
     .form {
@@ -520,6 +520,29 @@ footer span {
         flex-direction: row;
         justify-content: flex-end;
     }
+
+
+    #map iframe {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+    .map-text h2 {
+        font-size: 1.5em;
+        text-align: center;
+        font-weight: 400;
+    margin: 20px 0;
+    }
+
+    .map-text li {
+        font-size: 1.2em;
+    }
+    .map-text p {
+        text-align: left;
+    }
+
+
 
 @media screen and (min-width: 600px) {
 
@@ -597,8 +620,15 @@ footer span {
     padding: 15px
 }
 
-.author {}
 
+    /*****************/
+    /**** Galleru ****/
+    /*****************/
+
+
+    .gallery-imgs {
+        justify-content: space-around;
+    }
 
     /*****************/
     /**** Contact ****/
@@ -616,10 +646,22 @@ footer span {
         margin-bottom: 10px;
     }
 
-
-    .gallery-imgs {
-        justify-content: space-around;
+    #map {
+        display: flex;
+        flex-direction: row;
     }
+
+    .map-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .map-text p{
+        padding-left:24px;
+    }
+
+
 
 }
 
