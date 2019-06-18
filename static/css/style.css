@@ -42,6 +42,19 @@
         text-align: center;
         font-size: 40px;
     }
+
+    .title-2 {
+        padding: 15px 10px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .title-3 {
+        padding: 15px 10px;
+        text-align: center;
+        font-size: 20px;
+    }
+
     p strong {
         text-align: center;
         font-size: 30px;
@@ -63,6 +76,9 @@
         text-align: left;
     }
 
+    body, main {
+        background-color: #f7f7f7;
+    }
 
     .container {
         width: 90%;
@@ -120,6 +136,9 @@
 /* Nav Bar */
 /***********/
 
+    header {
+        background-color: white;
+    }
     #navbar-header, #nav-links {
         display: flex;
         flex-direction: row;
@@ -201,11 +220,26 @@
         margin: 20px 0;
     }
 
+    .social-text {
+        display: none;
+        color: white
+    }
+
+    #social-links {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 30px;
+    }
+
+
 /************/
 /* Link Box */
 /************/
 
 .link-box {
+    background-color: white;
     min-width: 300px;
     max-width: 20%;
     height: 320px;
@@ -258,7 +292,6 @@
 
 
 footer {
-    background-color: rgba(222, 222, 222, 0.6);
     text-align: center;
     padding: 20px;
 }
@@ -266,7 +299,8 @@ footer {
 .footer-links {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 20px;
 }
 
@@ -316,7 +350,7 @@ footer span {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 75px;
+    height: 65px;
     width: 100%;
     color: white;
     padding: 10px;
@@ -325,18 +359,79 @@ footer span {
 }
 
 .service a {
+    font-size: 1.3em;
     color: white;
 }
 #service-imgs {
     margin: 15px 0;
 }
-.service_img {
+.service_img, .gallery-img {
     width: 300px;
     height: 300px;
     background-position: 50%;
     background-size: auto 100%;
     background-repeat: no-repeat;
 }
+
+/*****************/
+/**** Gallery ****/
+/*****************/
+
+#gallery-post {
+    margin-bottom: 30px;
+}
+
+.gallery-imgs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#gallery .title-2:first-child{
+    padding: 0;
+}
+
+
+/*********************/
+/**** Testimonial ****/
+/*********************/
+
+.testimonial {
+    background-color: white;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    -moz-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.testimonial-text {
+    padding: 15px;
+}
+.author{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: var(--background);
+}
+.author p {
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 5px;
+}
+.author p:last-child{
+    border-bottom: none;
+}
+
+
 
 /*****************/
 /**** Contact ****/
@@ -371,7 +466,7 @@ footer span {
     }
 
     .col-md-3 {
-        width: 20%;
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -393,7 +488,7 @@ footer span {
     }
 
     #contact-btn {
-        width: 150px
+        width: 100%;
     }
 
     #contact-submit {
@@ -405,19 +500,37 @@ footer span {
 
 
 
-
-
-
-
-
-.social-text {
-    display: none;
-    color: white
+/*
+.testimonial {
+    margin: 20px 0 ;
+    -webkit-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    -moz-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.testimonial:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
-    #social-links {
-        width: 60%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
+.testimonial-text {
+
+    padding: 15px 0 15px 15px;
+
+}
+.testimonial:nth-child(even) .testimonial-text{
+    padding: 15px 15px 15px 0;
+}
+
+.author{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+ */
+

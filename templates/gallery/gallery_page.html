@@ -28,23 +28,66 @@
 {% block content %}
 
 
-     <h1 class="title">See Our Work For Yourself!</h1>
-        <article id="about" class="container padding-bottom">
-            <p class="text">
-                Based in Southend, Essex, JMS Commercial Cleaning is a small, but reliable company that has built up a solid reputation, purely built on trust in Essex and the surrounding areas.
-                We pride ourselves on our reliable, consistent and friendly service for our customers. Some of which we have built great relationships with and even service multiple properties for.
-                <br>
-                <br>
-                Our fully trained staff work to a detailed cleaning schedule and regular inspections by the cleaning manager ensures that we maintain our high standards. We have reliable systems in
-                place so that supplies are always updated and do not run out. We have numerous well trained cleaning staff employed by our business meaning that we can provide additional operatives if required.
+    <h1 class="title">Before and Afters!</h1>
 
-            </p>
-        </article>
+    <div id="gallery" class="container padding-bottom">
+        {% for job in jobs %}
+            {% if job.before_img_1 %}
+                {% if job.after_img_1 %}
+                    <div id="gallery-post">
+                        <h2 class="title-2">{{ job.title }}</h2>
 
-        <div id="contact" class="img-break">
-            <div class="container">
+                        <h2 class="title-3">Before</h2>
+                        <div class="gallery-imgs">
+                            {% if job.before_img_1 %}
+                                <img class="gallery-img" alt="{{ job.title }} - 1" src="{{ job.before_img_1.url }}">
+                            {% endif %}
 
-                {% include 'contact/contact_form.html' %}
-            </div>
+
+                            {% if job.before_img_2 %}
+                                <img class="gallery-img" alt="{{ job.title }} - 2" src="{{ job.before_img_2.url }}">
+                            {% endif %}
+
+
+                            {% if job.before_img_3 %}
+                                <img class="gallery-img" alt="{{ job.title }} - 3" src="{{ job.before_img_3.url }}">
+                            {% endif %}
+                        </div>
+
+
+                        <h2 class="title-3">After</h2>
+
+                        <div class="gallery-imgs">
+
+
+                            {% if job.after_img_1 %}
+                                <img class="gallery-img" alt="{{ job.title }} - 1" src="{{ job.after_img_1.url }}">
+                            {% endif %}
+
+
+                            {% if job.after_img_2 %}
+                                <img class="gallery-img" alt="{{ job.title }} - 2" src="{{ job.after_img_2.url }}">
+                            {% endif %}
+
+
+                            {% if job.after_img_3 %}
+                                <img class="gallery-img" alt="{{ job.title }} - 3" src="{{ job.after_img_3.url }}">
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+
+    </div>
+
+
+
+    <div id="contact" class="img-break">
+        <div class="container">
+
+            {% include 'contact/contact_form.html' %}
         </div>
+    </div>
 {% endblock %}

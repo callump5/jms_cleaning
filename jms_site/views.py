@@ -15,6 +15,7 @@ from .models import About, Service, Testimonials, JobPost
 def get_index(request):
 
     about = About.objects.all().first()
+    jobs = JobPost.objects.all()
 
     services = Service.objects.all()
 
@@ -33,6 +34,7 @@ def get_index(request):
     args = {
         'about': about,
         'services': services,
+        'jobs': jobs,
         'contact_form': contact_form,
     }
 
@@ -109,7 +111,13 @@ def get_testimonials(request):
     return render(request, 'testimonials/testimonials_page.html', args)
 
 def get_gallery(request):
-    return render(request, 'gallery/gallery_page.html')
+
+    jobs = JobPost.objects.all()
+
+    args = {
+        'jobs':jobs
+    }
+    return render(request, 'gallery/gallery_page.html', args)
 
 def get_contact(request):
     return render(request, 'contact/contact_page.html')

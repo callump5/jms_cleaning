@@ -29,28 +29,26 @@
 
 <h1 class="title">See What Our Clients Said</h1>
     <article id="testimonial" class="container padding-bottom text">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque cupiditate dolores iure, iusto
-            laudantium mollitia provident similique sint? Assumenda consectetur cupiditate deleniti dolorum
-            et, labore neque nobis praesentium quasidolor sit amet, consectetur adipisicing elit. Cumque cupiditate
-            dolores iure, iusto laudantium mollitia provident similique sint? Assumenda consectetur cupiditate deleniti dolorum et, labore neque nobis praesentium quasi repellat?</p>
+
+            {% autoescape off %}
+            {% for testimonial in testimonials  %}
+                <div class="testimonial">
+                    <p class="testimonial-text text">{{ testimonial.testimonial }}</p>
+                        <div class="author">
+                            <p>{{ testimonial.name }}</p>
+                            {% if testimonial.company %}
+                                <p>{{ testimonial.company }}</p>
+                            {% endif %}
+                            <p>{{ testimonial.date }}</p>
+                        </div>
+                </div>
+            {% endfor %}
+        {% endautoescape %}
+
     </article>
-        {% autoescape off %}
-                {% for testimonial in testimonials  %}
-                    <div class="testimonial">
-                        {% autoescape off %}
-                            {{ testimonial.testimonial }}
-                            <div class="author">
-                            {{ testimonial.name }}{{ testimonial.company }}
-
-                            </div>
-                        {% endautoescape %}
-                    </div>
-                {% endfor %}
-            {% endautoescape %}
-        <div id="contact" class="img-break">
-            <div class="container">
-
-                {% include 'contact/contact_form.html' %}
-            </div>
+    <div id="contact" class="img-break">
+        <div class="container">
+            {% include 'contact/contact_form.html' %}
         </div>
+    </div>
 {% endblock %}

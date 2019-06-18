@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.urls import reverse
 from django.utils.text import slugify
+from django.utils.timezone import now
 
 from django.db import models
 
@@ -56,6 +57,10 @@ class Testimonials(models.Model):
     name = models.CharField(max_length=200, default='Anonymous')
     company = models.CharField(max_length=400, blank=True, null=True)
     testimonial = models.TextField()
+    date = models.DateField(
+        editable=False,
+        default=now()
+    )
 
     def __unicode__(self):
         return self.name
