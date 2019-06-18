@@ -156,6 +156,7 @@
         width: 100%;
         padding: 10px 0;
         text-align: center;
+        font-size: 1.2em;
     }
 
     #nav-links li:last-child{
@@ -190,6 +191,7 @@
         background-position: 50%;
         background-repeat: no-repeat;
         background-image: var(--background-image);
+        background-size: auto 100%;
         color: white;
         display: flex;
         flex-direction: column;
@@ -242,7 +244,6 @@
     background-color: white;
     min-width: 300px;
     max-width: 20%;
-    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -497,7 +498,13 @@ footer span {
         justify-content: flex-end;
     }
 
+@media screen and (min-width: 800px){
 
+    .link-box {
+        height: 320px;
+    }
+
+}
 
 
 /*
