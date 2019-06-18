@@ -245,7 +245,6 @@
 /************/
 
 .link-box {
-    background-color: white;
     min-width: 300px;
     max-width: 20%;
     display: flex;
@@ -427,29 +426,27 @@ footer span {
     -webkit-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
     -moz-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
     box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+
 }
 .testimonial-text {
     padding: 15px;
 }
+
 .author{
-    width: 100%;
     padding: 10px;
+    background-image: var(--background);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-image: var(--background);
 }
+
 .author p {
     color: white;
     border-bottom: 1px solid white;
     padding: 5px;
 }
+
 .author p:last-child{
     border-bottom: none;
 }
@@ -569,6 +566,40 @@ footer span {
     }
 
 
+    /**********************/
+    /**** Testimonials ****/
+    /**********************/
+
+
+.testimonial {
+    margin: 20px 0 ;
+    -webkit-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    -moz-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.author{
+    min-width: 150px;
+    max-width: 150px;
+}
+.testimonial:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.testimonial-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px
+}
+
+.author {}
+
+
     /*****************/
     /**** Contact ****/
     /*****************/
@@ -585,40 +616,14 @@ footer span {
         margin-bottom: 10px;
     }
 
+
+    .gallery-imgs {
+        justify-content: space-around;
+    }
+
 }
 
 
 /*
-.testimonial {
-    margin: 20px 0 ;
-    -webkit-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
-    -moz-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
-    box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.testimonial:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.testimonial-text {
-
-    padding: 15px 0 15px 15px;
-
-}
-.testimonial:nth-child(even) .testimonial-text{
-    padding: 15px 15px 15px 0;
-}
-
-.author{
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
  */
 

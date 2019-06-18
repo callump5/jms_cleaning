@@ -28,22 +28,21 @@
 {% block content %}
 
 <h1 class="title">See What Our Clients Said</h1>
+
     <article id="testimonial" class="container padding-bottom text">
 
-            {% autoescape off %}
-            {% for testimonial in testimonials  %}
-                <div class="testimonial">
-                    <p class="testimonial-text text">{{ testimonial.testimonial }}</p>
-                        <div class="author">
-                            <p>{{ testimonial.name }}</p>
-                            {% if testimonial.company %}
-                                <p>{{ testimonial.company }}</p>
-                            {% endif %}
-                            <p>{{ testimonial.date }}</p>
-                        </div>
+        {% for testimonial in testimonials  %}
+            <div class="testimonial">
+                <p class="testimonial-text text">{{ testimonial.testimonial }}</p>
+                <div class="author">
+                    <p>{{ testimonial.name }}</p>
+                    {% if testimonial.company %}
+                        <p>{{ testimonial.company }}</p>
+                    {% endif %}
+                    <p>{{ testimonial.date }}</p>
                 </div>
-            {% endfor %}
-        {% endautoescape %}
+            </div>
+        {% endfor %}
 
     </article>
     <div id="contact" class="img-break">

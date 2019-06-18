@@ -93,11 +93,25 @@ def get_services(request):
 def get_service(request, service_slug):
     service = get_object_or_404(Service, slug=service_slug)
 
-    jobs = JobPost.objects.filter(service_id=service.id)[:3]
+    jobs = JobPost.objects.filter(service_id=service.id)[:1]
+
+    if request.method == 'POST':
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            contact_form.save()
+            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
+            return redirect('home')
+        else:
+            contact_form = ContactForm()
+
+    else:
+        contact_form = ContactForm()
+
 
     args = {
         'service': service,
-        'jobs': jobs
+        'jobs': jobs,
+        'contact_form': contact_form
     }
     return render(request, 'services/service_item_page.html', args)
 
@@ -105,8 +119,22 @@ def get_testimonials(request):
 
     testimonials = Testimonials.objects.all()
 
+    if request.method == 'POST':
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            contact_form.save()
+            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
+            return redirect('home')
+        else:
+            contact_form = ContactForm()
+
+    else:
+        contact_form = ContactForm()
+
+
     args = {
-        'testimonials': testimonials
+        'testimonials': testimonials,
+        'contact_form': contact_form
     }
     return render(request, 'testimonials/testimonials_page.html', args)
 
@@ -114,10 +142,42 @@ def get_gallery(request):
 
     jobs = JobPost.objects.all()
 
+    if request.method == 'POST':
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            contact_form.save()
+            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
+            return redirect('home')
+        else:
+            contact_form = ContactForm()
+
+    else:
+        contact_form = ContactForm()
+
+
     args = {
-        'jobs':jobs
+        'jobs':jobs,
+        'contact_form': contact_form
     }
     return render(request, 'gallery/gallery_page.html', args)
 
 def get_contact(request):
-    return render(request, 'contact/contact_page.html')
+
+
+    if request.method == 'POST':
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            contact_form.save()
+            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
+            return redirect('home')
+        else:
+            contact_form = ContactForm()
+
+    else:
+        contact_form = ContactForm()
+
+
+    args = {
+        'contact_form': contact_form
+    }
+    return render(request, 'contact/contact_page.html', args)
