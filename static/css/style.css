@@ -313,8 +313,24 @@ footer {
     font-weight: 500;
 }
 
+.footer-links li a {
+    margin: 10px;
+}
+
+.footer-links p {
+    text-align: center;
+}
+
 footer span {
     font-size: 1.4em;
+}
+
+#my_tag {
+    margin: 10px;
+}
+
+#my_tag p {
+    font-size: 1.3em;
 }
 
 /*****************/
@@ -326,8 +342,10 @@ footer span {
     padding: 25px 0;
 }
 
-#links, #service-cards{
+#links {
     width: 65%;
+}
+#links, #service-cards{
     margin: 0 auto;
     justify-content: space-around;
 }
@@ -457,6 +475,10 @@ footer span {
         font-size: 1.2em;
     }
 
+    .gdpr p {
+        font-size: 1.2em;
+    }
+
     .form input, #id_message, #id_service, #contact-btn {
         background-color: transparent;
         color: white;
@@ -504,6 +526,10 @@ footer span {
 
 @media screen and (min-width: 600px) {
 
+    .container {
+        width: 75%;
+    }
+
 
     /****************/
     /**** Navbar ****/
@@ -534,7 +560,29 @@ footer span {
 
     #landing, .img-break {
         min-height: 60vh;
-        background-size: 100% 100%;
+        background-size: 200% auto;
+    }
+
+
+    #service-cards {
+        justify-content: space-between;
+    }
+
+
+    /*****************/
+    /**** Contact ****/
+    /*****************/
+
+    .col-md-3 {
+        width: 22%;
+    }
+
+    #contact-btn {
+        width: unset;
+    }
+
+    #id_message {
+        margin-bottom: 10px;
     }
 
 }
