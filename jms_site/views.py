@@ -93,7 +93,7 @@ def get_services(request):
 def get_service(request, service_slug):
     service = get_object_or_404(Service, slug=service_slug)
 
-    jobs = JobPost.objects.filter(service_id=service.id)[:1]
+    jobs = JobPost.objects.filter(service_id=service.id)[:2]
 
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
