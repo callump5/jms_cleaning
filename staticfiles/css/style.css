@@ -395,6 +395,10 @@ footer span {
     background-size: auto 100%;
     background-repeat: no-repeat;
 }
+.gallery-img {
+    width: 300px;
+    height: auto;
+}
 
 /*****************/
 /**** Gallery ****/
