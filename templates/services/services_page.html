@@ -23,7 +23,7 @@
         <div id="service-cards" class="container row">
             {% for service in services %}
                 <div class="service" title="{{ service }}" style="background-image: url( {{ service.image.url }} )">
-                    <h1><a href="{% url 'service' service.slug %}">{{ service }}</a></h1>
+                    <h2><a href="{% url 'service' service.slug %}">{{ service }}</a></h2>
                 </div>
             {% endfor %}
         </div>
