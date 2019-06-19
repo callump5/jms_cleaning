@@ -2,6 +2,16 @@
 
 {% block head_js %}
     <title>JMS Commercial Cleaning</title>
+
+
+        <meta name="description" content="JMS Commercial Cleaning are a professional cleaning company based in Southend, Essex.
+        We offer services such as office cleaning, commercial cleaning, window cleaning, end of tenancy cleaning, and deep cleans.
+        So what ever it is you need, call today for a non-obligatory quote!" />
+
+
+        <meta property="og:description" content="JMS Commercial Cleaning are a professional cleaning company based in Southend, Essex.
+        We offer services such as office cleaning, commercial cleaning, window cleaning, end of tenancy cleaning, and deep cleans.
+        So what ever it is you need, call today for a non-obligatory quote!" />
 {% endblock %}
 
 {% block content %}
@@ -17,7 +27,7 @@
             {% include 'contact/map.html' %}
         </article>
 
-        <div id="link-box" class="grayed">
+        <div id="link-box" class="grayed" title="background-2">
 
             <h1 class="title">Want To Find Out More?</h1>
             <div id="links" class="container row">
@@ -75,7 +85,7 @@
             </div>
         </div>
 
-        <div id="contact" class="img-break">
+        <div id="contact" class="img-break" title="background-3">
             <div class="container">
 
                 {% include 'contact/contact_form.html' %}
