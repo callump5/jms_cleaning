@@ -7,7 +7,6 @@ PREPEND_WWW = True
 
 
 
-
 # Log DEBUG information to the console
 LOGGING = {
     'version': 1,
