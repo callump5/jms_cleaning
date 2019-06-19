@@ -2,6 +2,10 @@
 
 {% block head_js %}
     <title>JMS - {{ service }}</title>
+
+    <meta name="description" content="{{ service.meta }}" />
+
+    <meta property="og:description" content="{{ service.meta }}" />
 {% endblock %}
 
 {% block content %}
@@ -13,19 +17,23 @@
             {% autoescape off %}
                 <p>{{ service.description}}</p>
             {% endautoescape %}
+        </article>
 
-        <div id="service-imgs" class="row-flex">
-                {% for job in jobs %}
-                    {% if job.after_img_1 %}
-                        <div title="{{ job }}-1" class="service_img" style="background-image: url({{ job.after_img_1.url }})"></div>
-                    {% endif %}
-                    {% if job.after_img_2 %}
-                        <div title="{{ job }}-2" class="service_img" style="background-image: url({{ job.after_img_2.url }})"></div>
-                    {% endif %}
-                    {% if job.after_img_3 %}
-                        <div title="{{ job }}-3" class="service_img" style="background-image: url({{ job.after_img_3.url }})"></div>
-                    {% endif %}
-                {% endfor %}
+            <p class="call-to">Call Now For A Free Non-Obligatory Quote!</p>
+        <div class="container">
+            <div id="service-imgs" class="row-flex">
+                    {% for job in jobs %}
+                        {% if job.after_img_1 %}
+                            <div title="{{ job }}-1" class="service_img" style="background-image: url({{ job.after_img_1.url }})"></div>
+                        {% endif %}
+                        {% if job.after_img_2 %}
+                            <div title="{{ job }}-2" class="service_img" style="background-image: url({{ job.after_img_2.url }})"></div>
+                        {% endif %}
+                        {% if job.after_img_3 %}
+                            <div title="{{ job }}-3" class="service_img" style="background-image: url({{ job.after_img_3.url }})"></div>
+                        {% endif %}
+                    {% endfor %}
+            </div>
         </div>
 
 

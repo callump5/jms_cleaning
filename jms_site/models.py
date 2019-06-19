@@ -30,6 +30,7 @@ class About(models.Model):
 class Service(models.Model):
     service = models.CharField(max_length=300)
     slug = models.SlugField(max_length=300, default='', editable=False)
+    meta = models.TextField()
     description = HTMLField()
     image = models.ImageField(upload_to='services')
 
@@ -75,7 +76,7 @@ class Testimonials(models.Model):
 class JobPost(models.Model):
     title = models.CharField(max_length=200)
     service = models.ForeignKey(Service)
-    testimonial = models.ForeignKey(Testimonials)
+    testimonial = models.ForeignKey(Testimonials, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     before_img_1 = models.ImageField(upload_to='job_post/before', blank=True, null=True)
     before_img_2 = models.ImageField(upload_to='job_post/before', blank=True, null=True)
