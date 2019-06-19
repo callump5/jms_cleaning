@@ -30,36 +30,11 @@
 
      <h1 class="title">Contact Us</h1>
         <article id="contact-page" class="container padding-bottom text">
-            <p>
-                If you are unsure, or would like to call up to find out more, please find either our contact information,
+            <p>If you are unsure, or would like to call up to find out more, please find either our contact information,
                 or the contact form below and we will get back to you as quickly as possible
             </p>
-
-            <div id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63904.07041051893!2d0.63026460931656!3d51.568350793829595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8da32aa5a105b%3A0x3a1eae33c8d2ffc7!2sBlenheim+Chase%2C+Southend-on-Sea%2C+Leigh-on-Sea+SS9+3BZ!5e0!3m2!1sen!2suk!4v1560898377016!5m2!1sen!2suk" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                <div class="map-text text">
-                    <div id="areas">
-                        <h2>Areas We Serve</h2>
-                        <ul>
-                            <li>- Southend</li>
-                            <li>- Westcliff</li>
-                            <li>- Leigh On Sea</li>
-                            <li>- Hockley</li>
-                            <li>- Rayleigh</li>
-                            <li>- Basildon</li>
-                            <li>- Benfleet</li>
-                        </ul>
-                    </div>
-                    <div id="contact-details">
-                        <h2>Contact Details</h2>
-                        <p>Callum Pullinger</p>
-                        <p>07412 090817</p>
-                        <p>clpullinger@gmail.com</p>
-                    </div>
-                </div>
-            </div>
+            {% include 'contact/map.html' %}
         </article>
-
 
         <div id="contact" class="img-break">
             <div class="container">

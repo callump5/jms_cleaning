@@ -28,11 +28,14 @@
 {% block content %}
 
 
-     <h1 class="title">About JMS Cleaning </h1>
+     <h1 class="title">JMS Commercial Cleaning</h1>
         <article id="about" class="container padding-bottom text">
                 {% autoescape off %}
                     {{ about.about }}
                 {% endautoescape %}
+
+
+            {% include 'contact/map.html' %}
         </article>
 
         <div id="link-box" class="grayed">
@@ -72,7 +75,7 @@
 
         <div id="services" class="">
             <article class="container text">
-                <h1 class="title">Services</h1>
+                <h1 class="title">Why You Should Use Us</h1>
                 <p>No matter which industry you are in, you will probably find yourself needing a cleaner at some point.
                     What ever situation you find yourself in, JMS has the solution. We pride ourselves on our reliable,
                     consistent and friendly cleaning service for our customers, and our high standards we set oursleves,
@@ -92,7 +95,6 @@
                 {% endfor %}
             </div>
         </div>
-
 
         <div id="contact" class="img-break">
             <div class="container">

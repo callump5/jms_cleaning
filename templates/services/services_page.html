@@ -28,33 +28,33 @@
 {% block content %}
 
     <div id="services" class="">
-            <article class="container text">
-                <h1 class="title">Services</h1>
-                <p>No matter which industry you are in, you will probably find yourself needing a cleaner at some point.
-                    What ever situation you find yourself in, JMS has the solution. We pride ourselves on our reliable,
-                    consistent and friendly cleaning service for our customers, and our high standards we set oursleves,
-                    always leaves our customers happy</p>
-                <br>
-                <p>With all our services we provide necessary cleaning products and equipment, also all COSHH sheets can
-                    be provided on request.
-                </p>
-            </article>
+        <article class="container text">
+            <h1 class="title">Our Services</h1>
+            <p>No matter which industry you are in, you will probably find yourself needing a cleaner at some point.
+                What ever situation you find yourself in, JMS has the solution. We pride ourselves on our reliable,
+                consistent and friendly cleaning service for our customers, and our high standards we set oursleves,
+                always leaves our customers happy</p>
+            <br>
+            <p>With all our services we provide necessary cleaning products and equipment, also all COSHH sheets can
+                be provided on request.
+            </p>
+        </article>
 
 
-            <div id="service-cards" class="container row">
-                {% for service in services %}
-                    <div class="service" style="background-image: url( {{ service.image.url }} )">
-                        <h1><a href="{% url 'service' service.slug %}">{{ service }}</a></h1>
-                    </div>
-                {% endfor %}
-            </div>
+        <div id="service-cards" class="container row">
+            {% for service in services %}
+                <div class="service" style="background-image: url( {{ service.image.url }} )">
+                    <h1><a href="{% url 'service' service.slug %}">{{ service }}</a></h1>
+                </div>
+            {% endfor %}
         </div>
+    </div>
 
 
-        <div id="contact" class="img-break">
-            <div class="container">
+    <div id="contact" class="img-break">
+        <div class="container">
 
-                {% include 'contact/contact_form.html' %}
-            </div>
+            {% include 'contact/contact_form.html' %}
         </div>
+    </div>
 {% endblock %}

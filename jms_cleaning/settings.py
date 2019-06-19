@@ -137,3 +137,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') ##specify static root
 MEDIA_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = '/media/'
+
+
+# HTTPS Redirect
+
+SECURE_SSL_REDIRECT = False

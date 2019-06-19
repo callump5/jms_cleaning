@@ -532,7 +532,7 @@ footer span {
         font-size: 1.5em;
         text-align: center;
         font-weight: 400;
-    margin: 20px 0;
+        margin: 20px 0;
     }
 
     .map-text li {
@@ -645,6 +645,9 @@ footer span {
     #id_message {
         margin-bottom: 10px;
     }
+    #areas {
+        width: 100%;
+    }
 
     #map {
         display: flex;
@@ -655,10 +658,8 @@ footer span {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: center;
-    }
-    .map-text p{
-        padding-left:24px;
+        align-items: flex-start;
+        margin-left: 10px;
     }
 
 
