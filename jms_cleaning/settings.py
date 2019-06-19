@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'jms-cleaning.herokuapp.com',
-    '127.0.0.1'
+    '127.0.0.1',
+    'jmscommercialcleaning.co.uk'
 ]
 
 
