@@ -2,27 +2,6 @@
 
 {% block head_js %}
     <title>JMS Commercial Cleaning</title>
-
-    <!-- Meta Tags -->
-    <meta name="title" content="JMS Commercial Cleaning">
-    <meta name="description" content="Action Guitars has 15 years experiance in building and repairing custom guitar
-     setups for local pickers all over Essex | We build vintage style, custom electric guitars and we also offer a
-     guitar and amp repair service | Guitar Repairs Essex | Guitar Repair | Leigh-on-Sea | Southend-on-Sea |
-     Action Guitars"/>
-
-    <meta property="og:description" content="Action Guitars has 15 years experiance in building and repairing custom guitar
-     setups for local pickers all over Essex | We build vintage style, custom electric guitars and we also offer a
-     guitar and amp repair service | Guitar Repairs Essex | Guitar Repair | Leigh-on-Sea | Southend-on-Sea |
-     Action Guitars"/>
-
-
-    <!-- FB Tags -->
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Action Guitars" />
-    <meta property="og:url" content="actionguitars.co.uk" />
-    <meta property="og:image" content="\static\guitar-logo2.png">
-    <meta property="og:site_name" content="Action Guitars" />
 {% endblock %}
 
 {% block content %}
@@ -40,7 +19,7 @@
 
         <div id="link-box" class="grayed">
 
-                <h1 class="title">Want To Find Out More?</h1>
+            <h1 class="title">Want To Find Out More?</h1>
             <div id="links" class="container row">
                 <div class="link-box">
                     <h1>Check our Services</h1>
@@ -89,7 +68,7 @@
 
             <div id="service-cards" class="container row">
                 {% for service in services %}
-                    <div class="service" style="background-image: url( {{ service.image.url }} )">
+                    <div class="service" title="{{ service }}" style="background-image: url( {{ service.image.url }} )">
                         <h1><a href="{% url 'service' service.slug %}">{{ service }}</a></h1>
                     </div>
                 {% endfor %}
