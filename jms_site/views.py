@@ -181,3 +181,10 @@ def get_contact(request):
         'contact_form': contact_form
     }
     return render(request, 'contact/contact_page.html', args)
+
+
+def get_robots(request):
+    return render(request, 'crawlers/robots.txt')
+
+def get_sitemap(request):
+    return render(request, 'crawlers/sitemap-1001909.xml')
