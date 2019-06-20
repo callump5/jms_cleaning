@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .views import get_index, get_about, get_sitemap, get_robots, get_contact, get_service, get_services, get_testimonials, get_gallery
+from .views import get_index, get_about, get_sitemap, get_contact, get_service, get_services, get_testimonials, get_gallery
 urlpatterns = [
 
 
@@ -48,6 +48,5 @@ urlpatterns = [
     url(r'contact/$', get_contact, name='contact'),
 
 
-    url(r'^sitemap.xml/$', get_sitemap),
-    url(r'^robots.txt/$', get_robots),
+    url(r'^sitemap.xml/$', get_sitemap)
 ]

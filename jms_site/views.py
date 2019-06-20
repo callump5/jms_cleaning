@@ -226,10 +226,6 @@ def get_contact(request):
 
 
 
-def get_robots(request):
-    return render(request, 'crawlers/robots.txt')
-
-
 
 def get_sitemap(request):
     return render(request, 'crawlers/sitemap-1001909.xml')
