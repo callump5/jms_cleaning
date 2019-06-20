@@ -16,14 +16,14 @@
     <div id="services" class="">
         <article class="container text">
             <h1 class="title">Our Services</h1>
-            <p>No matter which industry you are in, you will probably find yourself needing a cleaner at some point.
-                What ever situation you find yourself in, JMS has the solution. We pride ourselves on our reliable,
-                consistent and friendly cleaning service for our customers, and our high standards we set oursleves,
-                always leaves our customers happy</p>
-            <br>
-            <p>With all our services we provide necessary cleaning products and equipment, also all COSHH sheets can
-                be provided on request.
-            </p>
+            {% autoescape off %}
+                {% for blurb in service_blurbs %}
+
+                    {{ blurb.text }}
+
+                {% endfor %}
+
+            {% endautoescape %}
         </article>
 
 

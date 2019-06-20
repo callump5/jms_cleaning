@@ -37,7 +37,6 @@
 
             gtag('config', 'UA-123955938-4');
         </script>
-
         {% block head_js %}
         
         {% endblock %}
@@ -46,7 +45,15 @@
 
     <body>
 
-       {% include 'base/navbar.html' %}
+        {% include 'base/navbar.html' %}
+
+        {% if messages %}
+            <ul class="message containers">
+        {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+            </ul>
+        {% endif %}
 
        {% include 'base/landing.html' %}
 

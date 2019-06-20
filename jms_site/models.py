@@ -51,6 +51,16 @@ class Service(models.Model):
         verbose_name = "Service"
         verbose_name_plural = 'Services'
 
+# Service Blurb
+class ServiceBlurb(models.Model):
+    text = HTMLField()
+
+    def __unicode__(self):
+        return 'Service - ' + str(self.id)
+
+    class Meta():
+        verbose_name = 'Service Blurb'
+        verbose_name_plural = 'Service Blurbs'
 
 
 # Testimonialsa
