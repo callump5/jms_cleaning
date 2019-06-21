@@ -11,6 +11,12 @@ urlpatterns = [
     url(r'^commercial-cleaning-southend/$', get_index),
     url(r'^end-of-tenancy-cleaning-essex/$', get_index),
     url(r'^end-of-tenancy-cleaning-southend/$', get_index),
+    url(r'^office-cleaning/$', get_index),
+    url(r'^office-cleaning-services/$', get_index),
+    url(r'^commercial-cleaning/$', get_index),
+    url(r'^commercial-cleaning-services/$', get_index),
+    url(r'^end-of-tenancy-cleaning/$', get_index),
+    url(r'^end-of-tenancy-cleaning-services/$', get_index),
 
     # About Page
     url(r'^about/$', get_about, name='about'),
