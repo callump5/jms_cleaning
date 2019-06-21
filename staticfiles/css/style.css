@@ -593,8 +593,11 @@ footer span {
     }
 
     #landing, .img-break {
-        min-height: 60vh;
         background-size: 200% auto;
+    }
+
+    #landing {
+        min-height: 60vh;
     }
 
 
