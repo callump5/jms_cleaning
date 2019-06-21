@@ -113,8 +113,7 @@ def get_services(request):
 
 # Get Service
 def get_service(request, service_slug):
-
-    service  = Service.objects.all().get(slug__iexact=service_slug)
+    service = get_object_or_404(Service, slug=service_slug)
 
     jobs = JobPost.objects.filter(service_id=service.id)[:2]
 
