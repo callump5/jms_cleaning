@@ -145,7 +145,7 @@ MEDIA_URL = '/media/'
 # HTTPS Redirect
 
 SECURE_SSL_REDIRECT = False
-
+SESSION_COOKIE_SECURE = True
 
 
 # Email
