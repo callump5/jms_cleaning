@@ -4,7 +4,7 @@ DEBUG = False
 
 SECURE_SSL_REDIRECT = True
 PREPEND_WWW = True
-SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = True
 
 
 # Log DEBUG information to the console
