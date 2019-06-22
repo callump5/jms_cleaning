@@ -36,18 +36,7 @@
                     {% endfor %}
             </div>
         </div>
-
-
-
-
-        <div id="service-cards" class="container row">
-            {% for service in services %}
-                <div class="service" style="background-image: url( {{ service.image.url }} )">
-                    <h1><a href="{% url 'service' service.slug %}">{{ service }}</a></h1>
-                </div>
-            {% endfor %}
-        </div>
-
+    
 
         <div id="contact" class="img-break" title="background-3">
             <div class="container">
