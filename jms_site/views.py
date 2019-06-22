@@ -52,6 +52,8 @@ def get_index(request):
 
 # About Page
 def get_about(request):
+
+    services = Service.objects.all()
     abouts = About.objects.all()
 
     if request.method == 'POST':
@@ -72,6 +74,7 @@ def get_about(request):
 
     args = {
         'abouts': abouts,
+        'services':services,
         'contact_form': contact_form,
     }
 
