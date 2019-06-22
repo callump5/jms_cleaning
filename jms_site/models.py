@@ -31,6 +31,7 @@ class Service(models.Model):
     service = models.CharField(max_length=300)
     slug = models.SlugField(max_length=300, default='', editable=False)
     meta = models.TextField()
+    brief = HTMLField()
     description = HTMLField()
     image = models.ImageField(upload_to='services')
 
