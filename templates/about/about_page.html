@@ -25,6 +25,23 @@
     </article>
 
 
+    <div class="container padding-bottom">
+
+    {% for testimonial in testimonials  %}
+        <div class="testimonial">
+            <p class="testimonial-text text">{{ testimonial.testimonial }}</p>
+            <div class="author">
+                <p>{{ testimonial.name }}</p>
+                {% if testimonial.company %}
+                    <p>{{ testimonial.company }}</p>
+                {% endif %}
+                <p>{{ testimonial.date }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+
     <div id="service-col" class="container padding-bottom">
         <h1 class="title">What We Offer</h1>
         {% for service in services %}
@@ -43,6 +60,9 @@
             </div>
         {% endfor %}
     </div>
+
+
+
 
 
     <div id="contact" class="img-break">
