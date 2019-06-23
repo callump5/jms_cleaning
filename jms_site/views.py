@@ -49,38 +49,6 @@ def get_index(request):
     return render(request, 'home/home.html', args)
 
 
-
-# About Page
-def get_about(request):
-
-    services = Service.objects.all()
-    abouts = About.objects.all()
-
-    if request.method == 'POST':
-        contact_form = ContactForm(request.POST)
-        if contact_form.is_valid():
-            contact = contact_form.save()
-            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
-            try:
-                send_my_mail(request, contact.name, contact.email, contact.number, contact.service, contact.message)
-            except SMTPAuthenticationError:
-                authError(request)
-            redirect('home')
-        else:
-            contact_form = ContactForm()
-
-    else:
-        contact_form = ContactForm()
-
-    args = {
-        'abouts': abouts,
-        'services':services,
-        'contact_form': contact_form,
-    }
-
-    return render(request, 'about/about_page.html', args)
-
-
 # Services Page
 def get_services(request):
 
