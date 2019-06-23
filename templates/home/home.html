@@ -73,6 +73,7 @@
                 {% endautoescape %}
             </article>
 
+
             <div id="service-col" class="container padding-bottom">
                 <h1 class="title">What We Offer</h1>
                 {% for service in services %}
@@ -81,10 +82,11 @@
                             <h2><a href="{% url 'service' service.slug %}">{{ service }}</a></h2>
                         </div>
                         <div class="service-text text">
-                            {% autoescape off %}
-                                {{ service.brief }}
-                                <a class="call-to" href="{% url 'service' service.slug %}">Find Out More</a>
-                            {% endautoescape %}
+                             {% autoescape off %}
+                                 <h3 class="title">{{ service}}</h3>
+                                 {{ service.brief }}
+                                 <a class="call-to" href="{% url 'service' service.slug %}">Find Out More</a>
+                             {% endautoescape %}
                         </div>
                     </div>
                 {% endfor %}
