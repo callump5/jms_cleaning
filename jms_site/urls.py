@@ -6,18 +6,6 @@ urlpatterns = [
     # Home Page
     url(r'^$', get_index, name='home'),
 
-    url(r'^office-cleaning/$', get_index),
-    url(r'^office-cleaning-essex/$', get_index),
-    url(r'^office-cleaning-southend/$', get_index),
-
-    url(r'^commercial-cleaning/$', get_index),
-    url(r'^commercial-cleaning-essex/$', get_index),
-    url(r'^commercial-cleaning-southend/$', get_index),
-
-    url(r'^end-of-tenancy-cleaning/$', get_index),
-    url(r'^end-of-tenancy-cleaning-essex/$', get_index),
-    url(r'^end-of-tenancy-cleaning-southend/$', get_index),
-
     # About Page
     url(r'^about/$', get_about, name='about'),
 
