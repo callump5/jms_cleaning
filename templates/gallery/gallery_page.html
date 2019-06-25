@@ -22,41 +22,44 @@
                     <div id="gallery-post">
                         <h2 class="title-2">{{ job.title }}</h2>
 
-                        <h2 class="title-3">Before</h2>
+                        <h2 class="title-2">Before</h2>
+
                         <div class="gallery-imgs">
+
+
                             {% if job.before_img_1 %}
-                                <img class="gallery-img" alt="{{ job.title }} - 1" src="{{ job.before_img_1.url }}">
+                                <div class="gallery-img" title="{{ job.title }} - 1" style="background-image: url({{ job.before_img_1.url }})"></div>
                             {% endif %}
 
 
-                            {% if job.before_img_2 %}
-                                <img class="gallery-img" alt="{{ job.title }} - 2" src="{{ job.before_img_2.url }}">
+                            {% if job.after_img_2 %}
+                                <div class="gallery-img" title="{{ job.title }} - 2" style="background-image: url({{ job.before_img_2.url }})"></div>
                             {% endif %}
 
 
-                            {% if job.before_img_3 %}
-                                <img class="gallery-img" alt="{{ job.title }} - 3" src="{{ job.before_img_3.url }}">
+                            {% if job.after_img_3 %}
+                                <div class="gallery-img" title="{{ job.title }} - 3" style="background-image: url({{ job.before_img_3.url }})"></div>
                             {% endif %}
                         </div>
 
 
-                        <h2 class="title-3">After</h2>
+                        <h2 class="title-2">After</h2>
 
                         <div class="gallery-imgs">
 
 
                             {% if job.after_img_1 %}
-                                <img class="gallery-img" alt="{{ job.title }} - 1" src="{{ job.after_img_1.url }}">
+                                <div class="gallery-img" title="{{ job.title }} - 2" style="background-image: url({{ job.after_img_1.url }})"></div>
                             {% endif %}
 
 
                             {% if job.after_img_2 %}
-                                <img class="gallery-img" alt="{{ job.title }} - 2" src="{{ job.after_img_2.url }}">
+                                <div class="gallery-img" title="{{ job.title }} - 2" style="background-image: url({{ job.after_img_2.url }})"></div>
                             {% endif %}
 
 
                             {% if job.after_img_3 %}
-                                <img class="gallery-img" alt="{{ job.title }} - 3" src="{{ job.after_img_3.url }}">
+                                <div class="gallery-img" title="{{ job.title }} - 3" style="background-image: url({{ job.after_img_3.url }})"></div>
                             {% endif %}
                         </div>
                     </div>

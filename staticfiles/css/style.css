@@ -421,16 +421,12 @@ footer span {
 #service-imgs {
     margin: 15px 0;
 }
-.service_img, .gallery-img {
+.service_img {
     width: 300px;
     height: 300px;
     background-position: 50%;
     background-size: auto 100%;
     background-repeat: no-repeat;
-}
-.gallery-img {
-    width: 300px;
-    height: auto;
 }
 
 
@@ -450,6 +446,16 @@ footer span {
 
 #gallery-post {
     margin-bottom: 30px;
+}
+
+.gallery-img {
+
+    width: 300px;
+    height: 300px;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 .gallery-imgs {

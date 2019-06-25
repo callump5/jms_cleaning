@@ -85,7 +85,6 @@ def get_about(request):
 
 # Services Page
 def get_services(request):
-
     services = Service.objects.all()
     service_blurbs = ServiceBlurb.objects.all()
 
@@ -120,7 +119,7 @@ def get_services(request):
 def get_service(request, service_slug):
     service = get_object_or_404(Service, slug=service_slug)
 
-    jobs = JobPost.objects.filter(service_id=service.id)[:2]
+    jobs = JobPost.objects.filter(service_id=service.id)[:1]
 
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
