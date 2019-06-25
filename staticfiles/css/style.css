@@ -141,6 +141,12 @@
         padding: 0  0 25px 0;
     }
 
+
+    #sneakyseo {
+        height: 0;
+        overflow: hidden;
+    }
+
 /***********/
 /* Nav Bar */
 /***********/
