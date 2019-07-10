@@ -7,6 +7,7 @@ PREPEND_WWW = True
 SESSION_COOKIE_SECURE = True
 
 
+
 # Log DEBUG information to the console
 LOGGING = {
     'version': 1,
