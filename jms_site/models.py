@@ -34,6 +34,7 @@ class Service(models.Model):
     brief = HTMLField()
     description = HTMLField()
     image = models.ImageField(upload_to='services')
+    rank = models.IntegerField()
 
     def get_absolute_url(self):
         kwargs = {

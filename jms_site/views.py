@@ -19,7 +19,7 @@ def get_index(request):
     about = About.objects.all().first()
     jobs = JobPost.objects.all()
 
-    services = Service.objects.all()
+    services = Service.objects.all().order_by('rank')
     service_blurb = ServiceBlurb.objects.all().first()
 
     if request.method == 'POST':
@@ -85,7 +85,7 @@ def get_about(request):
 
 # Services Page
 def get_services(request):
-    services = Service.objects.all()
+    services = Service.objects.all().order_by('rank')
     service_blurbs = ServiceBlurb.objects.all()
 
     if request.method == 'POST':
