@@ -19,84 +19,88 @@
 
 {% block content %}
 
+    <div id="service-col" class="container padding-bottom">
+        <h2 class="title">What We Offer</h2>
+        {% for service in services %}
+            <div class="service-col">
+                <div class="service-header" title="{{ service }}" style="background-image: url( {{ service.image.url }} )">
+                    <h2><a href="{% url 'service' service.slug %}">{{ service }}</a></h2>
+                </div>
+                <div class="service-text text">
+                     {% autoescape off %}
+                         <h3 class="title">{{ service}}</h3>
+                         {{ service.brief }}
+                         <a class="call-to" href="{% url 'service' service.slug %}">Find Out More</a>
+                     {% endautoescape %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
-     <h1 class="title">JMS Commercial Cleaning</h1>
-        <article id="about" class="container padding-bottom text">
-                {% autoescape off %}
-                    {{ about.about }}
-                {% endautoescape %}
 
 
-            {% include 'contact/map.html' %}
+    <div id="link-box" class="grayed" title="background-2">
+
+        <h1 class="title">Want To Find Out More?</h1>
+
+        <div id="links" class="container row">
+            <div class="link-box">
+                <h1>Check our Services</h1>
+                <p>We offer high qulaity, reliable cleaning services. So click on the button and check out all we
+                    have to offer! </p>
+                <a class="link-btn" href="/services/">Services</a>
+            </div>
+
+            <div class="link-box">
+                <h1>What They Said</h1>
+                <p>With plenty of happy clients, see what they had to say about our service!</p>
+                <a class="link-btn" href="/testimonials/">Testimonials</a>
+            </div>
+
+            <div class="link-box">
+                <h1>See For Yourself</h1>
+                <p>Want to see for yourself? Head over to our gallery page and check our the difference after JMS
+                    have been in! </p>
+                <a class="link-btn" href="/gallery/">Gallery</a>
+            </div>
+
+
+            <div class="link-box">
+                <h1>Impressed?</h1>
+                <p>Click on the button below to be taken to our contact page where you can get our information or
+                    book a call!  </p>
+                <a class="link-btn" href="/contact/">Get In Touch</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1 class="title">JMS Commercial Cleaning</h1>
+    <article id="about" class="container padding-bottom text">
+        {% autoescape off %}
+            {{ about.about }}
+        {% endautoescape %}
+
+
+    </article>
+
+    <div id="services" class="">
+        <article class="container text">
+            <h1 class="title">Why You Should Use Us</h1>
+            {% autoescape off %}
+                {{ service_blurb.text }}
+            {% endautoescape %}
         </article>
+    </div>
 
-        <div id="link-box" class="grayed" title="background-2">
+    <div class="container padding-bottom text">
+        {% include 'contact/map.html' %}
+    </div>
+    <div id="contact" class="img-break" title="background-3">
+        <div class="container">
 
-            <h1 class="title">Want To Find Out More?</h1>
-            <div id="links" class="container row">
-                <div class="link-box">
-                    <h1>Check our Services</h1>
-                    <p>We offer high qulaity, reliable cleaning services. So click on the button and check out all we
-                        have to offer! </p>
-                    <a class="link-btn" href="/services/">Services</a>
-                </div>
-
-                <div class="link-box">
-                    <h1>What They Said</h1>
-                    <p>With plenty of happy clients, see what they had to say about our service!</p>
-                    <a class="link-btn" href="/testimonials/">Testimonials</a>
-                </div>
-
-                <div class="link-box">
-                    <h1>See For Yourself</h1>
-                    <p>Want to see for yourself? Head over to our gallery page and check our the difference after JMS
-                        have been in! </p>
-                    <a class="link-btn" href="/gallery/">Gallery</a>
-                </div>
-
-
-                <div class="link-box">
-                    <h1>Impressed?</h1>
-                    <p>Click on the button below to be taken to our contact page where you can get our information or
-                        book a call!  </p>
-                    <a class="link-btn" href="/contact/">Get In Touch</a>
-                </div>
-            </div>
+            {% include 'contact/contact_form.html' %}
         </div>
-
-
-        <div id="services" class="">
-            <article class="container text">
-                <h1 class="title">Why You Should Use Us</h1>
-                {% autoescape off %}
-                    {{ service_blurb.text }}
-                {% endautoescape %}
-            </article>
-
-
-            <div id="service-col" class="container padding-bottom">
-                <h2 class="title">What We Offer</h2>
-                {% for service in services %}
-                    <div class="service-col">
-                        <div class="service-header" title="{{ service }}" style="background-image: url( {{ service.image.url }} )">
-                            <h2><a href="{% url 'service' service.slug %}">{{ service }}</a></h2>
-                        </div>
-                        <div class="service-text text">
-                             {% autoescape off %}
-                                 <h3 class="title">{{ service}}</h3>
-                                 {{ service.brief }}
-                                 <a class="call-to" href="{% url 'service' service.slug %}">Find Out More</a>
-                             {% endautoescape %}
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-
-        <div id="contact" class="img-break" title="background-3">
-            <div class="container">
-
-                {% include 'contact/contact_form.html' %}
-            </div>
-        </div>
+    </div>
 {% endblock %}
