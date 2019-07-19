@@ -9,15 +9,9 @@ urlpatterns = [
     # About Page
     url(r'^about/$', get_about, name='about'),
 
-    url(r'^office-cleaning-essex/$', get_index),
-    url(r'^office-cleaning-southend/$', get_index),
-    url(r'^commercial-cleaning-essex/$', get_index),
-    url(r'^commercial-cleaning-southend/$', get_index),
-    url(r'^end-of-tenancy-cleaning-essex/$', get_index),
-    url(r'^end-of-tenancy-cleaning-southend/$', get_index),
-
     # Services Page
     url(r'^services/$', get_services, name='services'),
+
     # Service Page
     url(r'^services/(?P<service_slug>[\w-]+)/$', get_service, name='service'),
 
@@ -29,7 +23,6 @@ urlpatterns = [
 
     # Contact Page
     url(r'^contact/$', get_contact, name='contact'),
-
 
     url(r'^sitemap.xml/$', get_sitemap),
     url(r'^robots.txt/$', get_robots)
