@@ -116,7 +116,7 @@ class ContactRequest(models.Model):
     message = models.TextField()
 
     def __unicode__(self):
-        return str(self.service) + 'Request' + ' - ' + self.name
+        return str(self.service) + ' Request' + ' - ' + self.name
 
     class Meta():
         verbose_name = "Contact Request"
