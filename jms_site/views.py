@@ -63,9 +63,9 @@ def get_about(request):
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
             contact = contact_form.save()
-            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             try:
                 send_my_mail(request, contact.name, contact.email, contact.number, contact.service, contact.message)
+                messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             except SMTPAuthenticationError:
                 authError(request)
             redirect('home')
@@ -94,9 +94,10 @@ def get_services(request):
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
             contact = contact_form.save()
-            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             try:
                 send_my_mail(request, contact.name, contact.email, contact.number, contact.service, contact.message)
+                messages.success(request,
+                                 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             except SMTPAuthenticationError:
                 authError(request)
             redirect('home')
@@ -127,9 +128,9 @@ def get_service(request, service_slug):
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
             contact = contact_form.save()
-            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             try:
                 send_my_mail(request, contact.name, contact.email, contact.number, contact.service, contact.message)
+                messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             except SMTPAuthenticationError:
                 authError(request)
             redirect('home')
@@ -156,9 +157,9 @@ def get_testimonials(request):
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
             contact = contact_form.save()
-            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             try:
                 send_my_mail(request, contact.name, contact.email, contact.number, contact.service, contact.message)
+                messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             except SMTPAuthenticationError:
                 authError(request)
             redirect('home')
@@ -186,9 +187,9 @@ def get_gallery(request):
 
         if contact_form.is_valid():
             contact = contact_form.save()
-            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             try:
                 send_my_mail(request, contact.name, contact.email, contact.number, contact.service, contact.message)
+                messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             except SMTPAuthenticationError:
                 authError(request)
             redirect('home')
@@ -212,9 +213,9 @@ def get_contact(request):
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
             contact = contact_form.save()
-            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             try:
                 send_my_mail(request, contact.name, contact.email, contact.number, contact.service, contact.message)
+                messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
             except SMTPAuthenticationError:
                 authError(request)
             redirect('home')
