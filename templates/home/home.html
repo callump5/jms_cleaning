@@ -20,20 +20,22 @@
 {% block content %}
 
     <div id="service-col" class="container padding-bottom">
-        <h2 class="title">What We Offer</h2>
+        <h2 class="title">Popular Cleaning Services</h2>
         {% for service in services %}
-            <div class="service-col">
-                <div class="service-header" title="{{ service }}" style="background-image: url( {{ service.image.url }} )">
-                    <h2><a href="{% url 'service' service.slug %}">{{ service }}</a></h2>
+            {% if service.popular %}
+                <div class="service-col">
+                    <div class="service-header" title="{{ service }}" style="background-image: url( {{ service.image.url }} )">
+                        <h2><a href="{% url 'service' service.slug %}">{{ service }}</a></h2>
+                    </div>
+                    <div class="service-text text">
+                         {% autoescape off %}
+                             <h3 class="title">{{ service}}</h3>
+                             {{ service.brief }}
+                             <a class="call-to" href="{% url 'service' service.slug %}">Find Out More</a>
+                         {% endautoescape %}
+                    </div>
                 </div>
-                <div class="service-text text">
-                     {% autoescape off %}
-                         <h3 class="title">{{ service}}</h3>
-                         {{ service.brief }}
-                         <a class="call-to" href="{% url 'service' service.slug %}">Find Out More</a>
-                     {% endautoescape %}
-                </div>
-            </div>
+            {% endif %}
         {% endfor %}
     </div>
 
@@ -41,11 +43,11 @@
 
     <div id="link-box" class="grayed" title="background-2">
 
-        <h1 class="title">Want To Find Out More?</h1>
+        <h1 class="title">Check Out The Following</h1>
 
         <div id="links" class="container row">
             <div class="link-box">
-                <h1>Check our Services</h1>
+                <h1>All Our Services</h1>
                 <p>We offer high qulaity, reliable cleaning services. So click on the button and check out all we
                     have to offer! </p>
                 <a class="link-btn" href="/services/">Services</a>

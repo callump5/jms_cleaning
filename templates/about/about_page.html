@@ -25,47 +25,6 @@
     </article>
 
 
-    <div class="container padding-bottom">
-        <h2 class="title" style="text-align: center;">What People Said About Us</h2>
-
-        {% for testimonial in testimonials  %}
-            <div class="testimonial">
-                <p class="testimonial-text text">{{ testimonial.testimonial }}</p>
-                <div class="author">
-                    <p>{{ testimonial.name }}</p>
-                    {% if testimonial.company %}
-                        <p>{{ testimonial.company }}</p>
-                    {% endif %}
-                    <p>{{ testimonial.date }}</p>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-
-
-    <div id="service-col" class="container padding-bottom">
-        <h2 class="title">What We Offer</h2>
-        {% for service in services %}
-            <div class="service-col">
-                <div class="service-header" title="{{ service }}" style="background-image: url( {{ service.image.url }} )">
-                    <h2><a href="{% url 'service' service.slug %}">{{ service }}</a></h2>
-                </div>
-                <div class="service-text text">
-                     {% autoescape off %}
-                         <h3 class="title">{{ service}}</h3>
-                         {{ service.brief }}
-                         <a class="call-to" href="{% url 'service' service.slug %}">Find Out More</a>
-                     {% endautoescape %}
-
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-
-
-
-
-
     <div id="contact" class="img-break">
         <div class="container">
 

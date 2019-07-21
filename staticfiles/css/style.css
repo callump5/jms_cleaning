@@ -219,10 +219,10 @@
     }
 
     #landing {
-        padding: 50px 0;
+        padding: 100px 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         text-align: center;
 
@@ -252,6 +252,14 @@
         flex-direction: row;
         justify-content: space-evenly;
         margin-top: 30px;
+    }
+
+    .cta {
+        padding: 10px;
+        border: 2px solid white;
+        background-color: transparent;
+        font-size: 1.3em;
+        color: white;
     }
 
 
@@ -441,7 +449,7 @@ footer span {
     text-align: center;
     font-weight: bold;
     font-size: 2em;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 
@@ -647,7 +655,7 @@ footer span {
     /**************/
 
     #links {
-        width: 75%;
+        width: 50%;
 
 
     }
@@ -691,13 +699,14 @@ footer span {
 
 
     #service-col .call-to  {
-        font-size: 1.5em;
+        font-size: 1.3em;
         text-align: center;
         justify-content: space-between;
         padding: 10px 15px;
         border: 2px solid grey;
-        margin-top: 50px
+        margin-top: 25px
     }
+
     .service-header {
         margin: 0;
     }
