@@ -4,8 +4,10 @@
     <url><loc>https://www.jmscommercialcleaning.co.uk/gallery/</loc><lastmod>2019-06-21</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
     <url><loc>https://www.jmscommercialcleaning.co.uk/testimonials/</loc><lastmod>2019-06-21</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
     <url><loc>https://www.jmscommercialcleaning.co.uk/contact/</loc><lastmod>2019-06-21</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-    <url><loc>https://www.jmscommercialcleaning.co.uk/services/office-cleaning/</loc><lastmod>2019-06-21</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-    <url><loc>https://www.jmscommercialcleaning.co.uk/services/end-of-tenancy/</loc><lastmod>2019-06-21</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-    <url><loc>https://www.jmscommercialcleaning.co.uk/services/janitorial-supplies/</loc><lastmod>2019-06-21</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-    <url><loc>https://www.jmscommercialcleaning.co.uk/services/commercial-cleaning/</loc><lastmod>2019-06-21</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+
+    {% for service in services %}
+        <url><loc>href="https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/</loc><lastmod>2019-06-21</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+    {% endfor %}
+
 </urlset>
+

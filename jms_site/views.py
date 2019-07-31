@@ -235,7 +235,13 @@ def get_contact(request):
 
 
 def get_sitemap(request):
-    return render(request, 'crawlers/sitemap-1001909.xml')
+
+    services = Service.objects.all()
+
+    args = {
+        'services': services
+    }
+    return render(request, 'crawlers/sitemap-1001909.xml', args)
 
 def get_robots(request):
     return render(request, 'robots.txt')
