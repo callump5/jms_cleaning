@@ -413,7 +413,6 @@ footer span {
     flex-direction: column;
     text-align: left;
     display: flex;
-    margin-right: 20px;
 }
 
 #service-cards {
@@ -737,6 +736,8 @@ footer span {
         flex-direction: column;
         text-align: left;
         display: flex;
+
+       margin-right: 20px;
     }
 
     .service-text p {}
