@@ -31,7 +31,6 @@
             <h1 class="title">What We Offer</h1>
 
         {% for service in services %}
-            {% if service.popular %}
                 <div class="service-col">
                      <a class="call-to-bottom" href="{% url 'service' service.slug %}">Find Out More</a>
 
@@ -47,7 +46,6 @@
 
                     </div>
                 </div>
-            {% endif %}
         {% endfor %}
         </div>
     </div>
