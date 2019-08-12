@@ -26,7 +26,11 @@
         text-decoration: none;
     }
 
-    p {
+    p, a, li{
+
+
+        font-family: 'Raleway', sans-serif;
+
         font-weight: normal;
     }
 
@@ -57,10 +61,16 @@
         font-size: 20px;
     }
     .service-text h3 {
-        padding: 15px 10px;
         text-align: center;
+        padding: 15px 0;
         font-size: 35px;
         font-weight: bold;
+    }
+
+    .service-text p {
+        text-align: justify;
+        font-size: 1.3em;
+        line-height: 35px;
     }
 
 
@@ -73,10 +83,15 @@
     .text p {
         text-align: center;
         font-size: 1.2em;
+        line-height: 35px;
     }
 
     .text {
         font-size: 18px;
+    }
+
+    .service-text {
+        text-align: left;
     }
     .text-center p {
         text-align: center;
@@ -220,18 +235,24 @@
 
     #landing {
         padding: 100px 0;
+        max-width: 80%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         text-align: center;
 
     }
 
+    #landing-logo {
+        width: 60%;
+        height: auto;
+    }
+
     #landing h1{
         font-size: 3em;
         color: white;
-        font-weight: 500;
+        font-weight: bold;
     }
 
     #landing h2 {
@@ -239,6 +260,12 @@
         color: white;
         font-weight: normal;
         margin: 20px 0;
+    }
+    #landing p {
+        font-size: 1.4em;
+        color: white;
+        font-weight: normal;
+        margin: 30px 0;
     }
 
     .social-text {
@@ -260,12 +287,20 @@
         background-color: transparent;
         font-size: 1.3em;
         color: white;
+        font-weight: bold;
     }
 
 
 /************/
 /* Link Box */
 /************/
+
+
+    #links {
+        width:75%;
+
+
+    }
 
 .link-box {
     min-width: 300px;
@@ -362,27 +397,23 @@ footer span {
 #service-col {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .service-col {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
+    flex-wrap: wrap-reverse;
     align-items: center;
-    margin: 35px 0;
+    margin: 25px 0;
 }
 
-.service-col:nth-child(odd) {
-    flex-direction: row-reverse;
-}
 .service-text {
-    display: none;
+    width: 80%;
+    flex-direction: column;
+    text-align: left;
+    display: flex;
     margin-right: 20px;
-}
-.service-col:nth-child(even) .service-text{
-    margin: 0 0 0 20px;
 }
 
 #service-cards {
@@ -398,10 +429,9 @@ footer span {
 }
 
 .service, .service-header {
-
-    width: 200px;
+    width: 80%;
     height: 320px;
-    margin: 10px 0 ;
+    margin: 20px 0;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -418,6 +448,7 @@ footer span {
 }
 
 .service h2, .service-header h2{
+    font-weight: bolder;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -432,6 +463,7 @@ footer span {
 .service a, .service-header a {
     font-size: 1.3em;
     color: white;
+    text-decoration: underline white;
 }
 #service-imgs {
     margin: 15px 0;
@@ -445,11 +477,19 @@ footer span {
 }
 
 
-.call-to {
-    text-align: center;
+.call-to-bottom {
+    width: 80%;
+    font-size: 1.3em;
     font-weight: bold;
-    font-size: 2em;
-    margin-top: 10px;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border: 2px solid grey;
+    margin: 15px 0;
+}
+
+.call-to {
+    display: none;
 }
 
 
@@ -601,7 +641,7 @@ footer span {
     .map-text .sub-title  {
         font-size: 1.5em;
         text-align: center;
-        font-weight: 400;
+        font-weight: bold;
         margin: 20px 0;
     }
 
@@ -619,14 +659,17 @@ footer span {
 
 
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 950px) {
 
+    .img-break {
+        background-size: 100% auto;
+    }
     .nav-container {
         width: 75%;
         margin: 0 auto;
     }
     .container {
-        width: 75%;
+        width: 66%;
     }
 
 
@@ -655,22 +698,19 @@ footer span {
     /**************/
 
     #links {
-        width: 50%;
+        width:40%;
 
 
     }
     #links, #service-cards{
         margin: 0 auto;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
 
     .link-box {
         height: 320px;
-    }
-
-    #landing, .img-break {
-        background-size: 200% auto;
+        margin: 10px 5px;
     }
 
     #landing {
@@ -689,16 +729,25 @@ footer span {
     /**********************/
 
 
+    .service-col {
+        flex-wrap: unset;
+        margin: 35px 0;
+    }
     .service-text{
-        width: 75%;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        text-align: left;
         display: flex;
     }
 
+    .service-text p {}
 
-    #service-col .call-to  {
+    #service-col .call-to-bottom  {
+        display: none;
+    }
+
+    .call-to {
+        display: block;
+        width: max-content;
         font-size: 1.3em;
         text-align: center;
         justify-content: space-between;
@@ -707,9 +756,16 @@ footer span {
         margin-top: 25px
     }
 
+
+    .service, .service-header {
+    width: 200px; }
+
     .service-header {
         margin: 0;
     }
+
+    .service-text h3 {
+        text-align: left;}
 
     /**********************/
     /**** Testimonials ****/
@@ -795,6 +851,13 @@ footer span {
 }
 
 
+@media screen and (min-width: 1000px) {
+
+
+    .container {
+        width: 50%;
+    }
+}
 /*
  */
 

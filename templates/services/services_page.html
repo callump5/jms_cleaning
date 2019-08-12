@@ -29,21 +29,26 @@
 
         <div id="service-col" class="container padding-bottom">
             <h1 class="title">What We Offer</h1>
-            {% for service in services %}
+
+        {% for service in services %}
+            {% if service.popular %}
                 <div class="service-col">
+                     <a class="call-to-bottom" href="{% url 'service' service.slug %}">Find Out More</a>
+
                     <div class="service-header" title="{{ service }}" style="background-image: url( {{ service.image.url }} )">
                         <h2><a href="{% url 'service' service.slug %}">{{ service }}</a></h2>
                     </div>
-                    <div class="service-text text">
+                    <div class="service-text">
                          {% autoescape off %}
-                             <h3 class="title">{{ service}}</h3>
+                             <h3 class="service-title">{{ service}}</h3>
                              {{ service.brief }}
-                             <a class="call-to" href="{% url 'service' service.slug %}">Find Out More</a>
-                         {% endautoescape %}
+                             {% endautoescape %}
+                    <a class="call-to" href="{% url 'service' service.slug %}">Find Out More</a>
 
                     </div>
                 </div>
-            {% endfor %}
+            {% endif %}
+        {% endfor %}
         </div>
     </div>
 

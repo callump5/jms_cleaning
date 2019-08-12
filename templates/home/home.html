@@ -7,16 +7,14 @@
 
 
 
-        <meta name="description" content="Professional commercial cleaners based in Essex. JMS Commercial Cleaning offers
-        several services such as office cleaning, commercial cleaning, end of tenancy cleaning. whatever it is you find
-        yourself looking for our highly trained and vetted cleaners will help get your property sparkling again! Call
-         today for a non-obligatory quote!" />
+        <meta name="description" content="Offering several services such as office cleaning, commercial cleaning, end of tenancy cleaning.
+        Whatever it is you find yourself looking for our highly trained and vetted cleaners will help get your property sparkling again! Call
+        today for a non-obligatory quote on any of our services!"/>
 
 
-        <meta property="og:description" content="Professional commercial cleaners based in Essex. JMS Commercial Cleaning offers
-        several services such as office cleaning, commercial cleaning, end of tenancy cleaning. whatever it is you find
-        yourself looking for our highly trained and vetted cleaners will help get your property sparkling again! Call
-         today for a non-obligatory quote!"/>
+        <meta property="og:description" content="Offering several services such as office cleaning, commercial cleaning, end of tenancy cleaning.
+        Whatever it is you find yourself looking for our highly trained and vetted cleaners will help get your property sparkling again! Call
+        today for a non-obligatory quote on any of our services!"/>
 {% endblock %}
 
 {% block content %}
@@ -26,15 +24,18 @@
         {% for service in services %}
             {% if service.popular %}
                 <div class="service-col">
+                     <a class="call-to-bottom" href="{% url 'service' service.slug %}">Find Out More</a>
+
                     <div class="service-header" title="{{ service }}" style="background-image: url( {{ service.image.url }} )">
                         <h2><a href="{% url 'service' service.slug %}">{{ service }}</a></h2>
                     </div>
-                    <div class="service-text text">
+                    <div class="service-text">
                          {% autoescape off %}
-                             <h3 class="title">{{ service}}</h3>
+                             <h3 class="service-title">{{ service}}</h3>
                              {{ service.brief }}
-                             <a class="call-to" href="{% url 'service' service.slug %}">Find Out More</a>
-                         {% endautoescape %}
+                             {% endautoescape %}
+                    <a class="call-to" href="{% url 'service' service.slug %}">Find Out More</a>
+
                     </div>
                 </div>
             {% endif %}
