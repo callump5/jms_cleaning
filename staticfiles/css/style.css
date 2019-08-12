@@ -394,6 +394,9 @@ footer span {
 /**** SERVICE ****/
 /*****************/
 
+#service .call-to {
+    margin: 20px auto;
+}
 #service-col {
     display: flex;
     flex-direction: column;
