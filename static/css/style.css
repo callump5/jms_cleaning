@@ -857,9 +857,11 @@ footer span {
 
 @media screen and (min-width: 1000px) {
 
-
+    #links {
+        width: 60%;
+    }
     .container {
-        width: 50%;
+        width: 60%;
     }
 }
 /*

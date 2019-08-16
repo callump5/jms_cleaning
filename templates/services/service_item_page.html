@@ -3,6 +3,10 @@
 {% block head_js %}
     <title>JMS - {{ service }}</title>
 
+
+    <link rel='canonical' href="https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/" >
+
+
     <meta name="description" content="{{ service.meta }}" />
     <meta property="og:description" content="{{ service.meta }}" />
 {% endblock %}
