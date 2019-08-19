@@ -1,18 +1,18 @@
 
 <?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>https://www.jmscommercialcleaning.co.uk</loc><lastmod>2019-08-12</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-    <url><loc>https://www.jmscommercialcleaning.co.uk/about/</loc><lastmod>2019-07-30</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-    <url><loc>https://www.jmscommercialcleaning.co.uk/services/</loc><lastmod>2019-07-30</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-    <url><loc>https://www.jmscommercialcleaning.co.uk/gallery/</loc><lastmod>2019-07-30</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-    <url><loc>https://www.jmscommercialcleaning.co.uk/testimonials/</loc><lastmod>2019-07-30</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-    <url><loc>https://www.jmscommercialcleaning.co.uk/contact/</loc><lastmod>2019-07-30</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.jmscommercialcleaning.co.uk</loc><lastmod>{{ date.year }}-{{ date.month }}-{{ date.day }}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.jmscommercialcleaning.co.uk/about/</loc><lastmod>{{ date.year }}-{{ date.month }}-{{ date.day }}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.jmscommercialcleaning.co.uk/services/</loc><lastmod>{{ date.year }}-{{ date.month }}-{{ date.day }}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.jmscommercialcleaning.co.uk/gallery/</loc><lastmod>{{ date.year }}-{{ date.month }}-{{ date.day }}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.jmscommercialcleaning.co.uk/testimonials/</loc><lastmod>{{ date.year }}-{{ date.month }}-{{ date.day }}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.jmscommercialcleaning.co.uk/contact/</loc><lastmod>{{ date.year }}-{{ date.month }}-{{ date.day }}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
 
     {% for service in services %}
-        <url><loc>https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/</loc><lastmod>2019-07-30</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-        <url><loc>https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/southend</loc><lastmod>2019-07-30</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-        <url><loc>https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/essex</loc><lastmod>2019-07-30</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-        <url><loc>https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/basildon/</loc><lastmod>2019-07-30</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-        <url><loc>https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/hockley</loc><lastmod>2019-07-30</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+        <url><loc>https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/</loc><lastmod>{{ date.year }}-{{ date.month }}-{{ date.day }}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+        <url><loc>https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/southend</loc><lastmod>{{ date.year }}-{{ date.month }}-{{ date.day }}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+        <url><loc>https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/essex</loc><lastmod>{{ date.year }}-{{ date.month }}-{{ date.day }}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+        <url><loc>https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/basildon/</loc><lastmod>{{ date.year }}-{{ date.month }}-{{ date.day }}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+        <url><loc>https://www.jmscommercialcleaning.co.uk/services/{{ service.slug }}/hockley</loc><lastmod>{{ date.year }}-{{ date.month }}-{{ date.day }}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
     {% endfor %}
 
 </urlset>

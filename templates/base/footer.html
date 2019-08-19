@@ -9,6 +9,17 @@
             <li><a class="nav-btn link" href="/contact/">Contact</a></li>
         </ul>
 
+        <div id="seo" class="container row">
+            <ul>
+                {% for link in links %}
+                    <li><a href="/services/{{ link.slug }}/">Office Cleaning Essex</a></li>
+                    <li><a href="/services/{{ link.slug }}/southend">Office Cleaning Southend</a></li>
+                    <li><a href="/services/{{ link.slug }}/essex">Commercial Cleaning Essex</a></li>
+                    <li><a href="/services/{{ link.slug }}/basildon/">Commercial Cleaning Southend</a></li>
+                    <li><a href="/services/{{ link.slug }}/hockley">End Of Tenancy Cleaning Southend</a></li>
+                {% endfor %}
+           </ul>
+        </div>
         <div id="my_tag">
             <p >Designed & Developed by <span>Callum Pullinger</span></p>
         </div>

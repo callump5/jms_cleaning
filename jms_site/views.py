@@ -6,6 +6,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .send_email import send_my_mail, authError
 
+from datetime import datetime
 from .forms import ContactForm
 from .models import About, Service, Testimonials, JobPost, ServiceBlurb
 
@@ -18,6 +19,7 @@ def get_index(request):
 
     about = About.objects.all().first()
     jobs = JobPost.objects.all()
+    links = Service.objects.all()
 
     services = Service.objects.all().order_by('rank')
     service_blurb = ServiceBlurb.objects.all().first()
@@ -43,6 +45,7 @@ def get_index(request):
     args = {
         'about': about,
         'services': services,
+        'links': links,
         'jobs': jobs,
         'contact_form': contact_form,
         'service_blurb': service_blurb
@@ -58,6 +61,8 @@ def get_about(request):
     services = Service.objects.all()
     abouts = About.objects.all()
     tesimonials = Testimonials.objects.all()[:4]
+
+    links = Service.objects.all()
 
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
@@ -77,6 +82,7 @@ def get_about(request):
 
     args = {
         'abouts': abouts,
+        'links': links,
         'contact_form': contact_form,
         'services': services,
         'testimonials':tesimonials
@@ -89,6 +95,7 @@ def get_about(request):
 def get_services(request):
     services = Service.objects.all().order_by('rank')
     service_blurbs = ServiceBlurb.objects.all()
+    links = Service.objects.all()
 
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
@@ -110,6 +117,7 @@ def get_services(request):
 
     args = {
         'services': services,
+        'links': links,
         'contact_form': contact_form,
         'service_blurbs': service_blurbs
     }
@@ -120,8 +128,9 @@ def get_services(request):
 
 # Get Service
 def get_service(request, service_slug):
-    service = get_object_or_404(Service, slug=service_slug)
 
+    service = get_object_or_404(Service, slug=service_slug)
+    links = Service.objects.all()
     jobs = JobPost.objects.filter(service_id=service.id)[:1]
 
     if request.method == 'POST':
@@ -143,6 +152,7 @@ def get_service(request, service_slug):
     args = {
         'service': service,
         'jobs': jobs,
+        'links': links,
         'contact_form': contact_form
     }
 
@@ -153,6 +163,8 @@ def get_service(request, service_slug):
 def get_testimonials(request):
 
     testimonials = Testimonials.objects.all()
+    links = Service.objects.all()
+
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
@@ -181,6 +193,8 @@ def get_testimonials(request):
 def get_gallery(request):
 
     jobs = JobPost.objects.all()
+    links = Service.objects.all()
+
     if request.method == 'POST':
 
         contact_form = ContactForm(request.POST)
@@ -201,6 +215,7 @@ def get_gallery(request):
 
     args = {
         'jobs':jobs,
+        'links': links,
         'contact_form': contact_form
     }
     return render(request, 'gallery/gallery_page.html', args)
@@ -208,6 +223,8 @@ def get_gallery(request):
 
 
 def get_contact(request):
+
+    links = Service.objects.all()
 
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
@@ -226,6 +243,7 @@ def get_contact(request):
         contact_form = ContactForm()
 
     args = {
+        'links': links,
         'contact_form': contact_form
     }
 
@@ -237,8 +255,9 @@ def get_contact(request):
 def get_sitemap(request):
 
     services = Service.objects.all()
-
+    date = datetime.now()
     args = {
+        'date': date,
         'services': services
     }
     return render(request, 'crawlers/sitemap-1001909.xml', args)
