@@ -255,7 +255,7 @@ def get_contact(request):
 def get_sitemap(request):
 
     services = Service.objects.all()
-    date = datetime.now()
+    date = datetime.today().strftime('%Y-%m-%d')
     args = {
         'date': date,
         'services': services
